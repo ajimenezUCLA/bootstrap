@@ -18,6 +18,9 @@
     <title>Ristorante Con Fusion</title>
 </head>
 
+
+
+
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
@@ -33,7 +36,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal"> -->
+                    <a role="button" id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -206,7 +210,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-warning bt-sm" role="button">
+                    <!-- <a data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-warning bt-sm" role="button"> -->
+                    <a class="btn btn-block btn-warning" role="button" id="reserveButton" title="Or Call us at +852 12345678">
                         Reserve Table
                     </a>
                     <!-- Old Button with  tooltip -->
@@ -497,6 +502,20 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
+        });
+    </script>
+
+    <!-- Login Button -->
+    <script>
+        $('#loginButton').click(function() {
+            $('#loginModal').modal('show');
+        });
+    </script>
+
+    <!-- Reserve Table Button -->
+    <script>
+        $('#reserveButton').click(function() {
+            $('#reserveModal').modal('show');
         });
     </script>
 </body>
